@@ -32,12 +32,12 @@ class ToyRobotRunnerTest {
         runner.execute("place 0,0,NORTH");
         runner.execute("move");
         runner.execute("report");
-        assertThat(bos.toString(StandardCharsets.UTF_8), equalTo("0, 1, NORTH\n"));
+        assertThat(bos.toString("UTF-8"), equalTo("0, 1, NORTH\n"));
         bos.reset();
         runner.execute("place 0, 0, NORTH");
         runner.execute("left");
         runner.execute("report");
-        assertThat(bos.toString(StandardCharsets.UTF_8), equalTo("0, 0, WEST\n"));
+        assertThat(bos.toString("UTF-8"), equalTo("0, 0, WEST\n"));
         bos.reset();
         runner.execute("place 1,2,EAST");
         runner.execute("move");
@@ -45,7 +45,7 @@ class ToyRobotRunnerTest {
         runner.execute("left");
         runner.execute("move");
         runner.execute("report");
-        assertThat(bos.toString(StandardCharsets.UTF_8), equalTo("3, 3, NORTH\n"));
+        assertThat(bos.toString("UTF-8"), equalTo("3, 3, NORTH\n"));
 
     }
 }
